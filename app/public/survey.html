@@ -5,6 +5,8 @@
 	<title>Friend Finder</title>
 	<!-- Latest compiled and minified Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
@@ -15,24 +17,183 @@
 		<hr>
 		<h3><strong>About You</strong></h3>
 		<h4>Name (Required)</h4>
-		<input type="text" class="form-control">
+		<input type="text" id="friend-name" class="form-control">
 		<h4>Link to Photo Image (Required)</h4>
-		<input type="text" class="form-control">
+		<input type="text" id="friend-imageLink" class="form-control">
 		<hr>
 
 		<form>
+
 		<h3><strong>Question 1</strong></h3>
 		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-			<select id="disabledSelect" class="form-control" placeholder="Select an Option">
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer1" placeholder="Select an Option">
 				<option>1 (Strongly Disagree></option>
 				<option>2</option>
 				<option>3</option>
 				<option>4</option>
 				<option>5 (Strong Agree)</option>
 			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 2</strong></h3>
+		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer2" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 3</strong></h3>
+		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer3" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 4</strong></h3>
+		<h4>You rarely do something just out of sheer curiousity.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer4" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 5</strong></h3>
+		<h4>People can rarely upset you.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer5" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 6</strong></h3>
+		<h4>It is often difficult for you to relate to other people's feelings.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer6" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 7</strong></h3>
+		<h4>In a discussion, truth should be more important than people's sensitivities.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer7" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 8</strong></h3>
+		<h4>You rarely get carried away by fantasies and ideas.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer8" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 9</strong></h3>
+		<h4>You think everyone's views should be respected regardless of whether they are supported by facts or not.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer9" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
+		<h3><strong>Question 10</strong></h3>
+		<h4>You feel more energetic after spending time with a group of people.</h4>
+		<div class="row">
+			<div class="col-xs-3">
+			<select class="form-control" id="answer10" placeholder="Select an Option">
+				<option>1 (Strongly Disagree></option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5 (Strong Agree)</option>
+			</select>
+			</div>
+		</div>
+
 		</form>
+		<br>
 		
+	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+	<hr>
+
 	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p><a href="#/api/friends">API Friends List</a></p>
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+
+		$("submit").on("click",function(event) {
+			event.preventDefault();
+			var newFriend = {
+				name: $("#friend-name").val().trim(),
+				photo: $("#friend-imageLink").val().trim(),
+				scores: function() {
+					for (var i=0; i < scores.length; i++) {
+						
+					}
+				}
+			};
+		});
+
+	</script>
 
 </body>
 
