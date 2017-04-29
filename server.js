@@ -12,12 +12,10 @@ app.use(express.static(__dirname + "/public"));
 // Using BodyParser to interpret data sent to it
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
 // Routes
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 // Initiate the listener
 app.listen(PORT, function() {
