@@ -167,7 +167,7 @@
 		</form>
 		<br>
 		
-	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+	<button type="submit" id="submit-button" class="btn btn-primary btn-lg btn-block">Submit</button>
 	<hr>
 
 	</div>
@@ -180,17 +180,34 @@
 
 	<script type="text/javascript">
 
-		$("submit").on("click",function(event) {
+		// make sure you're listener has the correct target path
+		$("#submit-button").on("click",function(event) {
+			console.log('yay')
 			event.preventDefault();
+			// this is where you'd want to do some client side validation that the user actually answered each question and not post to the server until they have
 			var newFriend = {
 				name: $("#friend-name").val().trim(),
 				photo: $("#friend-imageLink").val().trim(),
-				scores: function() {
-					for (var i=0; i < scores.length; i++) {
-						
-					}
-				}
+				scores: [
+					$('#answer1').val(),
+					$('#answer2').val(),
+					$('#answer3').val(),
+					$('#answer4').val(),
+					$('#answer5').val(),
+					$('#answer6').val(),
+					$('#answer7').val(),
+					$('#answer8').val(),
+					$('#answer9').val(),
+					$('#answer10').val(),
+				]
 			};
+
+			// this is just using a jquery ajax request to post the data to your server
+			$.post('/api/friends', newFriend, function(response) {
+				console.log('response')
+				console.log(response)
+			})
+
 		});
 
 	</script>
